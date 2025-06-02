@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Bento grid</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    
+
+    body{
+      font-family: DM Sans;
+      background-color: rgb(248, 248, 248);
+    }
+    :root{
+      --Purple-100: hsl(254, 88%, 90%);
+      --Purple-500: hsl(256, 67%, 59%);
+      --Yellow-100: hsl(31, 66%, 93%);
+      --Yellow-500: hsl(39, 100%, 71%);
+      --White: hsl(0, 0%, 100%);
+      --Black: hsl(0, 0%, 7%);
+
+    }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+
+  <body>
+    <div
+      class="p-5 md:p-20 container justify-self-center grid grid-cols-1 md:grid-cols-4 gap-y-7 gap:0 md:gap-7 "
+    >
+      <div class="row-start-13 py-7 md:py-0 md:row-start-1 row-span-3 flex flex-col items-center justify-center gap-4 rounded-2xl px-8 " 
+      style="background-color: var(--Yellow-100);">
+        <p class="font-medium text-4xl">Create and schedule content <span class="font-normal" 
+          style="color: var(--Purple-500);">quicker.</span></p>
+        <img src="assets/images/illustration-create-post.webp" alt="" />
+      </div>
+
+      <div class="row-start-1 md:col-start-2 col-span-4 md:col-span-2 row-span-2 flex flex-col items-center justify-center gap-4 rounded-2xl px-10 py-20"
+      style="background-color: var(--Purple-500);">
+        <p class="text-5xl md:text-6xl text-center font-medium text-white ">Social Media 
+          <span style="color: var(--Yellow-500);">10x</span> Faster with AI </p>
+        <img class="w[70%] md:w-[50%]" src="assets/images/illustration-five-stars.webp" alt="">
+        <span class="text-white text-xl md:text-xs">Over 4,000 5-star reviews</span>
+      </div>
+
+      <div class="row-start-7 col-span-4 md:col-span-1 md:col-start-4 md:row-start-1 row-span-4 flex flex-col items-center justify-start gap-4 rounded-2xl overflow-hidden  py-10 "
+      style="background-color: var(--Purple-100);">
+        <p class="text-2xl md:text-3xl font-medium px-5 md:px-8">Schedule to social media.</p>
+        <img class="px-8 md:px-0 md:flex-1 md:scale-x-150 md:translate-x-[90px]" src="assets/images/illustration-schedule-posts.webp" alt="">
+        <p class="px-15 text-center md:text-start md:px-8 font-medium">Optimize post timings to publish content at the perfect time for your audience.</p>
+      </div>
+      
+      <div class="row-start-3 col-span-4 md:col-span-1 md:col-start-2 row-span-2 flex flex-col items-center justify-start gap-4 rounded-2xl overflow-hidden  py-10 bg-white">
+        <img class="p-5 md:p-0 md:scale-x-120 md:translate-x-[50px]" src="assets/images/illustration-multiple-platforms.webp" alt="">
+        <p class="px-8 text-3xl font-medium">Manage multiple accounts and platforms.</p>
+      </div>
+
+      
+      <div class="row-start-5 col-span-4 md:col-span-1 md:row-start-3 md:col-start-3  row-span-2 flex flex-col items-center justify-start gap-4 rounded-2xl overflow-hidden px-8  pt-10 bg-white"
+      style="background-color: var(--Yellow-500);">
+        <p class="  text-3xl font-medium">Maintain a consistent posting schedule.</p>
+        <img class="scale-y-150 translate-y-[50px]" src="assets/images/illustration-consistent-schedule.webp" alt="">
+      </div>
+
+
+      <div class="row-start-16 md:row-start-4 row-span-2 flex gap-6 md:gap-0 flex-col items-start md:items-center justify-between  rounded-2xl overflow-hidden px-5  py-5"
+      style="background-color: var(--Yellow-500);">
+        <p class=" text-4xl font-medium">Write your content using AI.</p>
+        <img class="w-[90%]" src="assets/images/illustration-ai-content.webp" alt="">
+      </div>
+
+      <div class="row-start-12 col-span-4 md:col-span-1 md:col-start-2 md:row-start-5 row-span-1 flex flex-col items-start gap-10  rounded-2xl overflow-hidden px-6  py-10 bg-white">
+        <div>
+          <p class="font-medium"> <span class="text-7xl">>56%</span> </p>
+          <p class="font-medium pt-5">faster audience growth</p>
+        </div>
+        <img class="w-[80%] md:w-[100%]" src="assets/images/illustration-audience-growth.webp" alt="">
+      </div>
+
+      <div class="row-start-11 md:col-start-3 md:row-start-5  col-span-2 row-span-1 flex items-start md:items-center  flex-col md:flex-row items-center gap-5 py-5 md:py-0 px-10 md:px-7  rounded-2xl "
+      style="background-color: var(--Purple-500);">
+        <img class="w[100%] md:w-[45%]" src="assets/images/illustration-grow-followers.webp" alt="">
+        <p class="text-3xl md:text-4xl font-medium flex-1 text-white">Grow followers with non-stop content. </p>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Mahmoud Awad</a>.
+    </div>
+  </body>
+</html>
+
+
