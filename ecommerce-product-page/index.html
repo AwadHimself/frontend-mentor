@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>  
+  <div class="container justify-self-center">
+    <!-- start Navbar  -->
+    <div class="navbar mx-10 md:mx-15  border-b-blue-100 border-b-[.5px] flex items-center justify-between relative ">
+      <div class="flex gap-10 items-center">
+        <img class="block w-[20px]  md:hidden" src="images/icon-menu.svg" alt="">
+        <h1 class="logo  font-medium">sneakers</h1>
+        <ul 
+        class="links
+          absolute
+          left-[-30px]
+          md:left-0
+          w-full
+          h-[100vh]
+          md:h-fit
+          md:relative
+          text-grey
+          flex 
+          flex-col
+          md:flex-row 
+          gap-5 
+          text-sm 
+          font-extralight">
+          <li class="link">Collections</li>
+          <li class="link">Men</li>
+          <li class="link">Women</li>
+          <li class="link">About</li>
+          <li class="link">Contact</li>
+        </ul>
+      </div>
+
+      <div class="flex gap-4  md:gap-10 items-center">
+        <div class="cart relative cursor-pointer">
+          <img class="w-[20px] h-[20px] " src="images/icon-cart.svg" alt="">
+          <span class="absolute bg-orange-500 rounded-md px-1 text-xs top-[-5px] left-[12px] "></span>
+        </div>
+        <img class="w-[15px] md:w-[50px] avatar" src="images/image-avatar.png" alt="">
+      </div>
+
+      <div class="shopping-cart w-[300px] h-[200px]  bg-white shadow-xl absolute top-[80px] right-[0] rounded-xl hidden">
+        <p class="pt-5 pb-3 px-3 text-xl font-medium border-b border-b-blue-100">cart</p>
+        <div class="item flex flex-col items-center justify-between  p-3">
+        </div>
+      </div>
+    </div>
+    <!-- end Navbar  -->
+    
+
+
+    <!-- start product  -->
+      <div class="product flex mt-25 mx-25 justify-between ">
+        <div class="slider basis-[40%] flex flex-col gap-7 ">
+          <div class="main-pic">
+            <img class="rounded-2xl cursor-pointer" src="images/image-product-1.jpg" alt="">
+          </div>
+          <div class="slider-pics flex gap-7">
+            <img class="w-[20%] rounded-xl" src="images/image-product-1-thumbnail.jpg" alt="">
+            <img class="w-[20%] rounded-xl" src="images/image-product-2-thumbnail.jpg" alt="">
+            <img class="w-[20%] rounded-xl" src="images/image-product-3-thumbnail.jpg" alt="">
+            <img class="w-[20%] rounded-xl" src="images/image-product-4-thumbnail.jpg" alt="">
+          </div>
+        </div>
+
+
+        <div class="product-info basis-[45%] mt-20">
+          <p class="text-md font-medium text-stone-500">Sneaker Company</p>
+          <h1 class="text-5xl! font-bold m-0! mt-5!">Fall Limited Edition Sneakers</h1>
+          <p class="mt-10 text-stone-500">
+              These low-profile sneakers are your perfect casual wear companion. Featuring a 
+              durable rubber outer sole, they’ll withstand everything the weather can offer.
+          </p>
+          <div class="price flex gap-3 mt-6 items-center ">
+            <p class="dis-price text-2xl tracking-wider font-bold ">$125.00</p>
+            <p class="discount px-2  text-sm rounded-md bg-stone-800 text-white">50%</p>
+          </div>
+          <p class="main-price mt-2 line-through text-stone-500">$250.00</p>
+          <div class="buy mt-7 flex justify-start gap-10">
+            <div class="counter flex items-center gap-10 p-3 bg-stone-100 rounded-md">
+              <img class=" p-2  w-[30px] h-[20px] cursor-pointer" src="images/icon-minus.svg" alt="">
+              <p class="text-2xl">1</p>
+              <img class=" p-2  w-[30px] h-[30px] cursor-pointer" src="images/icon-plus.svg" alt="">
+            </div>
+            <button class="flex items-center justify-center rounded-xl px-10 cursor-pointer text-2xl font-medium gap-3 bg-orange-400
+            hover:bg-orange-200
+            "><img src="images/icon-cart.svg" alt="">Add to cart</button>
+          </div>
+        </div>
+        
+        <!-- overlay  -->
+        <div class="overlay hidden" ></div>
+        <div class="lightbox-gallery flex flex-col gap-5 justify-center items-center hidden">
+          <div class="big-img relative flex justify-center items-center w-fit">
+            <img class="close   absolute rounded-4xl p-2  bg-white top-[-20px] right-[18%] cursor-pointer   " src="images/icon-close.svg" alt="">
+            <img class="next absolute rounded-4xl p-2 cursor-pointer w-[30px] h-[30px]  bg-white right-[18%]   " src="images/icon-next.svg" alt="" srcset="">
+            <img class="prev absolute rounded-4xl p-2 cursor-pointer  w-[30px] h-[30px] bg-white left-[18%] " src="images/icon-previous.svg" alt="" srcset="">
+            <img class="w-[60%] rounded-2xl prod-img" src="images/image-product-1.jpg" alt="">
+          </div>
+          <div class="overlay-slider justify-center flex gap-5">
+            <img class="active w-[10%] cursor-pointer rounded-2xl" src="images/image-product-1-thumbnail.jpg" alt="" srcset="">
+            <img class="w-[10%] cursor-pointer rounded-2xl" src="images/image-product-2-thumbnail.jpg" alt="" srcset="">
+            <img class="w-[10%] cursor-pointer rounded-2xl" src="images/image-product-3-thumbnail.jpg" alt="" srcset="">
+            <img class="w-[10%] cursor-pointer rounded-2xl" src="images/image-product-4-thumbnail.jpg" alt="" srcset="">
+          </div>
+        </div>
+
+
+
+      </div>
+  </div>
+  
+  
+  <script src="main.js"></script>
+
+
+
+
+
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
+
+
+<!-- 
+
+  
+  
+  
+  
+
+  
+
+
+
+  
+  
+  
+
+  0
+  Add to cart 
+  -->
